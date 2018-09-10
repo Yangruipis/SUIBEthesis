@@ -17,9 +17,20 @@
 \RequirePackage[labelfont={bf,footnotesize}, labelsep=space, textfont={bf, footnotesize}]{caption}    % 调整caption的字号与粗细，同时中间用空格而非冒号分割
 \RequirePackage[top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm]{geometry} % 调整页边距
 \RequirePackage{setspace}   % 调整行距
+\RequirePackage{tocloft}    % 调整目录字体
 % \setmainfont{Times New Roman}
 
 
+% 目录页字体
+\renewcommand\cftsecfont{\xiaosan \bfseries}
+\renewcommand\cftsubsecfont{\sihao \bfseries}
+\renewcommand\cftsubsubsecfont{\xiaosi \bfseries}
+\renewcommand{\contentsname}{\hfill\bfseries\Large \sanhao{\textbf{目\hspace{1em}录}} \hfill}   
+\renewcommand{\cftaftertoctitle}{\hfill}
+
+
+
+% 添加中文字体
 \setCJKfamilyfont{hei}{微软雅黑} 
 \newcommand{\hei}{\CJKfamily{hei}}
 \setCJKfamilyfont{song}{宋体} 
@@ -28,7 +39,7 @@
 \newcommand{\lishu}{\CJKfamily{lishu}}
 \setCJKfamilyfont{calibri}{Calibri} 
 \newcommand{\calibri}{\CJKfamily{calibri}}
-\setCJKfamilyfont{kai}{方正楷体_GBK} 
+\setCJKfamilyfont{kai}{楷体_GB2312}
 \newcommand{\kai}{\CJKfamily{kai}}
 
 
@@ -128,7 +139,7 @@
  \headrule
 }
 
-\renewcommand\contentsname{\sanhao{\textbf{目\hspace{1em}录}}}
+
 % 创建申明页
 \newcommand\make@statement{
 
