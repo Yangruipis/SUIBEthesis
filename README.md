@@ -9,8 +9,8 @@
 
 windows版本我后面会继续调试，不过因为用的都是win下的字体，我觉得应该没啥问题
 
-![](./data/scrshot/p1.jpg) ![](./data/scrshot/p2.jpg)
-![](./data/scrshot/p3.jpg) ![](./data/scrshot/p4.jpg)
+![](./data/scrshot/1.jpg) ![](./data/scrshot/2.jpg)
+![](./data/scrshot/3.jpg) ![](./data/scrshot/4.jpg)
 
 # TODO:
 
