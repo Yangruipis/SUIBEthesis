@@ -1,0 +1,153 @@
+% -------------------------
+% Author: 杨睿
+% Github: https://github.com/Yangruipis
+% E-mail: yangruipis@163.com
+% -------------------------
+
+\documentclass{SUIBEthesis}
+
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage[round, comma, sort&compress]{natbib}
+\usepackage[nottoc]{tocbibind}        % 将参考文献加入目录
+\bibliographystyle{plain}    % 引用文献格式
+
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+\begin{document}
+
+\title{上海对外经贸大学硕士论文\LaTeX 模板示例文档}
+\author{你的名字}
+\studentnum{1626xxxx}
+\advisor{xxx~~教授}
+\degree{科学学位}
+\school{你的学院}
+\major{你的专业}
+\finishdate{2018年11月}
+
+
+\maketitle
+
+\newpage
+
+\begin{abstract}
+  本文是上海对外经贸大学硕士毕业论文\LaTeX 模板示例文档，该模板包括了核心文件\textbf{SUIBEthesis.cls}、示例文件\textbf{main.tex}、BiBTex文件\textbf{ref.bib}、以及相关的图片等数据文件夹\textbf{data}。该模板满足上海对外经贸大学硕士论文的写作规范，且使用方法非常简单，后续会开发本硕通用的毕业论文模板。
+
+  模板文件的撰写主要借鉴了tex.stackexchange.com上的诸多问题与解答，以及清华大学、中国科学技术大学、浙江大学等知名高校在ShareLaTeX上的开源模板，目前正处于测试阶段。如果你也具有多年的\LaTeX 使用经验，并且对\TeX 的cls类文件编写较为熟悉，那么欢迎加入到本项目的测试和维护中来，在我的GitHub上(https://github.com/TwoMental/SUIBEthesis)提交pull request，我会第一时间做出回复。
+
+  
+  
+\end{abstract}
+
+\keywords{LaTeX；SUIBE；毕业论文}
+
+\newpage
+\begin{enabstract}
+  
+\end{enabstract}
+
+This is an english abstract...
+
+\enkeywords{keyword1, keyword2}
+
+
+% ------------------- 目录页 -----------------------
+\newpage
+\pagestyle{empty}
+\tableofcontents
+\pagestyle{empty}
+\thispagestyle{coverpage}
+% --------------------------------------------------
+
+
+\newpage
+\setcounter{page}{1}
+\pagestyle{mainpage}
+
+
+
+
+
+\section{测试一级章节}
+\subsection{测试二级章节}
+\subsubsection{测试三级章节}
+
+测试脚注\footnote{I love \LaTeX}
+
+测试参考文献引用：
+
+\begin{itemize}
+\item 一般引用\cite{lamport1994latex}
+\item 多重引用\cite{lamport1994latex, knuth1984texbook}
+\item 其他类型\cite[see][]{knuth1984texbook}
+\item 其他类型\cite[section2]{knuth1984texbook}
+  \item \cite[see][]{knuth1984texbook, lamport1994latex}
+\end{itemize}
+
+
+正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试
+
+正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试正文字体字号行距测试
+
+
+测试图片~\ref{fig:1} 
+
+\begin{figure}[htbp!]
+  \centering
+  \includegraphics[height=3cm]{data/figure/logo.pdf}
+  \caption{上海对外经贸大学校徽}
+  \label{fig:1}
+\end{figure}
+
+
+测试表格~\ref{tab:1}
+
+\begin{table}[htbp]
+  \centering
+  \caption{网络节点与边数统计}
+  \begin{tabular}{ccc}
+    \toprule
+    \toprule
+    年份    & 节点(上市公司)数   & 边数 \\
+    \midrule
+    2005  & 978   & 5,736 \\
+    2006  & 1,002 & 5,691 \\
+    2007  & 1,081 & 6,014 \\
+    2008  & 1,141 & 6,132 \\
+    \bottomrule
+    \bottomrule
+  \end{tabular}%
+  \label{tab:1}%
+\end{table}%
+
+公式测试：
+
+\begin{eqnarray}
+L(y_i, f(x_i)) = \frac{1}{n}\sum_{i=1}^n y_i \ln (\sigma(x_i)) + (1-y_i)\ln (1-\sigma(x_i))
+\end{eqnarray}
+
+
+
+\section{测试一级章节2}
+测试脚注2\footnote{这是第二个脚注}
+
+\begin{eqnarray}
+a^2 + b^2 = c^2
+\end{eqnarray}
+
+\newpage
+\xiaosi
+
+\bibliography{ref}
+
+\newpage
+\begin{mythanks}
+
+感谢我的老师和小伙伴
+\end{mythanks}
+
+\end{document}
+
+
