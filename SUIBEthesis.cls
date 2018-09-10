@@ -135,7 +135,7 @@
 % 自定义主页面页眉页脚
 \newpagestyle{mainpage}{
   \sethead{}{\hei{\xiaowu{\textcolor[RGB]{128,128,132}{\@title}}}}{}
- \setfoot{}{\xiaowu{\textcolor[RGB]{128,128,132}{\thepage}}}{}
+ \setfoot{}{\thepage}{}
  \headrule
 }
 
