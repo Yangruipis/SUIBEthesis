@@ -9,12 +9,15 @@
 
 
 \LoadClass[a4paper, UTF8, zihao=-4]{ctexbook}[2015/05/14]
-\RequirePackage{tikz}
-\RequirePackage{xeCJK}
-\RequirePackage{tabularx}
-\setmainfont{Times New Roman}
-
-
+\RequirePackage{tikz}        % 固定位置
+\RequirePackage{xeCJK}       % 中文支持
+\RequirePackage{tabularx}    % 固定表格宽度
+\RequirePackage{titlesec}    % 调整页眉页脚
+\RequirePackage{color}       % 调整字体颜色
+\RequirePackage[labelfont={bf,footnotesize}, labelsep=space, textfont={bf, footnotesize}]{caption}    % 调整caption的字号与粗细，同时中间用空格而非冒号分割
+\RequirePackage[top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm]{geometry} % 调整页边距
+\RequirePackage{setspace}   % 调整行距
+% \setmainfont{Times New Roman}
 
 
 \setCJKfamilyfont{hei}{微软雅黑} 
@@ -25,6 +28,11 @@
 \newcommand{\lishu}{\CJKfamily{lishu}}
 \setCJKfamilyfont{calibri}{Calibri} 
 \newcommand{\calibri}{\CJKfamily{calibri}}
+\setCJKfamilyfont{kai}{方正楷体_GBK} 
+\newcommand{\kai}{\CJKfamily{kai}}
+
+
+
 
 % 插入字号： 
 % 三号, 1.5 倍行距
@@ -36,6 +44,7 @@
 \newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
 \newcommand{\sihao}{\fontsize{14pt}{16pt}\selectfont}
 \newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\xiaowu}{\fontsize{9pt}{16pt}\selectfont}
 
 % 获取tex文件中定义的变量，通过 \SUIBE@xxxx 调用
 \newcommand{\advisor}[1]{\gdef\SUIBE@advisor{#1}}
@@ -50,7 +59,14 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
+% 自定义填写时的下划线
+\newcommand\SUIBE@underline[2][6em]{%
+    \hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt\relax
+  }
+
+  
 \renewcommand{\baselinestretch}{1.25}
+
 \renewcommand{\tablename}{表} 
 \renewcommand{\figurename}{图}
 
@@ -74,17 +90,92 @@
   {\parbox{\linewidth}{ #2}};}
 
 
-
-
 \renewcommand{\maketitle}{
+
+  \make@cntitle 
+  \make@statement 
+
+  
+}
+
+% 自定义cover页的页眉页脚
+\newpagestyle{coverpage}{
+  \sethead{}{\hei{\xiaowu{\textcolor[RGB]{128,128,132}{\@title}}}}{}     %设置页眉
+  % \setfoot{左页脚}{中页脚}{右页脚}      %设置页脚，可以在页脚添加 \thepage  显示页数
+  \headrule                                      % 添加页眉的下划线
+  % \footrule                                       %添加页脚的下划线
+}
+
+\newpagestyle{statementpage}{
+  \sethead{}{}{}
+}
+
+\newpagestyle{abstractpage}{
+  \sethead{}{\hei{\xiaowu{\textcolor[RGB]{128,128,132}{摘要}}}}{}
+  \headrule
+}
+
+\newpagestyle{enabstractpage}{
+  \sethead{}{\hei{\xiaowu{\textcolor[RGB]{128,128,132}{Abstract}}}}{}
+  \headrule
+}
+
+
+% 自定义主页面页眉页脚
+\newpagestyle{mainpage}{
+  \sethead{}{\hei{\xiaowu{\textcolor[RGB]{128,128,132}{\@title}}}}{}
+ \setfoot{}{\xiaowu{\textcolor[RGB]{128,128,132}{\thepage}}}{}
+ \headrule
+}
+
+\renewcommand\contentsname{\sanhao{\textbf{目\hspace{1em}录}}}
+% 创建申明页
+\newcommand\make@statement{
+
+  
+  \thispagestyle{statementpage}
+    \vpostext{4cm}{\sanhao \textbf{学位论文原创性声明}}
+
+    \vposleft{6cm}{\song
+      \begin{spacing}{2.0}
+        \sihao
+        \hspace{2em}本人所呈交的学位论文是我在导师指导下完成的。据我所知，除文中已经注明引用的内容外，本论文不包含其他个人已经发表或撰写过的研究成果。对本文的研究做出重要贡献的个人和集体，均已在文中作了明确说明并表示谢意。
+
+        ~
+        
+        \hspace{2em}学位论文作者签名：\SUIBE@underline[6em]{} \hspace{2em} 日期：\SUIBE@underline[6em]{}
+      \end{spacing}
+      }
+
+
+      \vpostext{14cm}{\sanhao \textbf{学位论文使用授权声明}}
+
+      \vposleft{16cm}{\song
+      \begin{spacing}{2.0}
+        \sihao
+        \hspace{2em} 本人完全了解上海对外经贸大学有关保留、使用学位论文的规定，即：学校有权保留学位论文并向国家主管部门或其指定机构送交论文的电子版和纸质版，可以上网公布论文的全部和部分内容，可以复制并允许学位论文进入学校图书馆被查阅，有权将学位论文的内容编入有关数据库进行检索，有权将学位论文的标题和摘要汇编出版。保密的论文在解密后遵守此规定。
+
+        ~
+        
+        \hspace{6em}学位论文作者签名： \hspace{8em} 导师签名：
+
+        \hspace{8em}日期：\SUIBE@underline[6em]{} \hspace{2em} 日期：\SUIBE@underline[6em]{}
+        
+      \end{spacing}
+      
+    }
+}
+
+% 创建cover页
+\newcommand\make@cntitle{
 
   \begin{titlepage}
 
-    \vposleft{2cm}{\includegraphics[height=3cm]{data/figure/logo.pdf}}
+    \vposleft{2cm}{\hspace{2em}\includegraphics[height=3cm]{data/figure/logo.pdf}}
     \vposleft{3cm}{\hspace{20em}
       \begin{tabular}{cl}
-        \song{学校代码：} & 10273 \\
-        \song{学\hspace{2em}号：} & \SUIBE@studentnum
+        \song{\xiaowu{学校代码：}} & \xiaowu{10273} \\
+        \song{\xiaowu{~学\hspace{2em}号：}} & \xiaowu{\SUIBE@studentnum}
       \end{tabular}
     }
     
@@ -105,16 +196,96 @@
         \textbf{完成时间：} & \SUIBE@finishdate \\ \cline{2-2}
       \end{tabular}
     }
-    
-  \end{titlepage}  
+  \end{titlepage}
+  
 }
 
+\renewcommand{\abstractname}{摘\hspace{1em}要}
+
+\RequirePackage{indentfirst}
+\newenvironment{abstract}{%
+   
+  \thispagestyle{abstractpage}
+   \@beginparpenalty\@lowpenalty
+   \begin{center}%
+
+     ~
+     
+        \textbf{\sanhao{\abstractname}}
+        \@endparpenalty\@M
+      \end{center}  \xiaosi \song % 后面需要空行，防止第一行无法缩进
+
+      ~
+
+     
+    }
+
+    \newcommand{\keywords}[1]{
+
+      ~
+
+      \textbf{\xiaosi 关键词：} #1 }
+
+\newenvironment{enabstract}{%
+   
+    \thispagestyle{enabstractpage}
+   \@beginparpenalty\@lowpenalty
+   \begin{center}%
+     ~
+     
+     \sanhao \textbf{Abstract}
+     
+        \@endparpenalty\@M
+      \end{center}  \xiaosi % 后面需要空行，防止第一行无法缩进
 
 
+      ~
+
+      
+    }
+
+    \newenvironment{mythanks}{%
+   
+   \@beginparpenalty\@lowpenalty
+   \begin{center}%
+     
+     ~
+     
+     \xiaosan \textbf{致\hspace{1em}谢}
+     
+        \@endparpenalty\@M
+      \end{center}  \xiaosi \kai % 后面需要空行，防止第一行无法缩进
 
 
+      ~
 
+      
+    }
 
+    
+    \newcommand{\enkeywords}[1]{
 
+      ~
 
+      \textbf{\xiaosi Keywords：} #1 }
 
+    \setcounter{secnumdepth}{3}    % 使section深度为3，可以显示subsubsection的编号
+    \setcounter{tocdepth}{3}       % 使目录深度为3，可以显示subsubsection的目录
+    \renewcommand{\thesection}{\arabic{section}}
+    \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+    \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+    
+    \titleformat*{\section}{\bfseries\centering\sanhao}
+    \titleformat*{\subsection}{\bfseries \sihao}
+    \titleformat*{\subsubsection}{\bfseries \xiaosi}
+
+    \RequirePackage{amsmath}         % 
+    \numberwithin{equation}{section} % 公式按照章节编号，依赖amsmath
+
+    \renewcommand\bibname{\xiaosan 参考文献}
+
+    % 每个section进行换页
+    \let\stdsection\section
+    \renewcommand\section{\newpage\stdsection}
+
+    
