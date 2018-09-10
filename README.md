@@ -3,6 +3,11 @@
 
 # 上海对外经贸大学研究生毕业论文Latex模板
 
+编译环境：
+- textlive 2017
+- Arch Linux: manjaro
+
+windows版本我后面会继续调试，不过因为用的都是win下的字体，我觉得应该没啥问题
 
 ![](./data/scrshot/p1.png) ![](./data/scrshot/p2.png)
 ![](./data/scrshot/p3.png) ![](./data/scrshot/p4.png)
