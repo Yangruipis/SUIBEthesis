@@ -141,13 +141,88 @@ a^2 + b^2 = c^2
 
 \subsection{测试二级章节3}
 
+
+
+\begin{myappendix}
+\begin{python}[moreemph={[4]42},caption={这是一个测试}]
+  # -*- coding:utf8 -*- 
+  import os
+
+  
+  class Node:
+  
+      def __init__(self, value):
+          self.value = value
+
+
+  def find_max_sum(arr:list) -> int:
+      cur = 0
+      _max = 0
+      for i in arr:
+          cur = max(cur + i, 0)
+          _max = max(cur, _max)
+      return _max
+
+
+  print('1+2/3*4-5%6//7{0}'.format(1))
+\end{python}
+
+\begin{python}[moreemph={[4]42},caption={这是一个测试}]
+  # -*- coding:utf8 -*- 
+  import os
+
+  
+  class Node:
+  
+      def __init__(self, value):
+          self.value = value
+
+
+  def find_max_sum(arr:list) -> int:
+      cur = 0
+      _max = 0
+      for i in arr:
+          cur = max(cur + i, 0)
+          _max = max(cur, _max)
+      return _max
+
+
+  print('1+2/3*4-5%6//7{0}'.format(1))
+\end{python}
+
+\begin{python}[moreemph={[4]42},caption={这是一个测试}]
+  # -*- coding:utf8 -*- 
+  import os
+
+  
+  class Node:
+  
+      def __init__(self, value):
+          self.value = value
+
+
+  def find_max_sum(arr:list) -> int:
+      cur = 0
+      _max = 0
+      for i in arr:
+          cur = max(cur + i, 0)
+          _max = max(cur, _max)
+      return _max
+
+
+  print('1+2/3*4-5%6//7{0}'.format(1))
+\end{python}
+
+\end{myappendix}
+
 \xiaosi
 \bibliography{ref}
 
-\newpage
+
 \begin{mythanks}
 感谢我的老师和小伙伴
 \end{mythanks}
+
 
 \end{document}
 

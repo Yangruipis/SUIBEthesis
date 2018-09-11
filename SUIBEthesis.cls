@@ -258,7 +258,7 @@
     }
 
     \newenvironment{mythanks}{%
-   
+   \newpage
    \@beginparpenalty\@lowpenalty
    \begin{center}%
      
@@ -275,6 +275,23 @@
       
     }
 
+     \newenvironment{myappendix}{%
+   \newpage
+   \@beginparpenalty\@lowpenalty
+   \begin{center}%
+     
+     ~
+     
+     \xiaosan \textbf{附\hspace{1em}录}
+     
+        \@endparpenalty\@M
+      \end{center}  \xiaosi \kai % 后面需要空行，防止第一行无法缩进
+
+
+      ~
+
+      
+    }
     
     \newcommand{\enkeywords}[1]{
 
@@ -301,4 +318,48 @@
     \let\stdsection\section
     \renewcommand\section{\newpage\stdsection}
 
+    % 插入代码
+    \RequirePackage{listings}
+    \renewcommand{\lstlistlistingname}{Code Listings}
+    \renewcommand{\lstlistingname}{Code Listing}
+    \definecolor{gray}{gray}{0.5}
+    \definecolor{green}{rgb}{0,0.5,0}
     
+
+    \lstnewenvironment{python}[1][]{
+	\lstset{  % python 专用设置
+		language=python,
+		basicstyle=\song \small\setstretch{1}, % 此处可更改代码字体
+		stringstyle=\color{red},
+		showstringspaces=false,
+		alsoletter={1234567890},
+		otherkeywords={\ , \}, \{},
+		keywordstyle=\color{blue},
+		emph={access,and,break,class,continue,def,del,elif ,else,%
+			except,exec,finally,for,from,global,if,import,in,i s,%
+			lambda,not,or,pass,print,raise,return,try,while},
+		emphstyle=\color{orange}\bfseries,
+		emph={[2]True, False, None, self},
+		emphstyle=[2]\color{green},
+		emph={[3]from, import, as},
+		emphstyle=[3]\color{blue},
+		upquote=true,
+		morecomment=[s]{"""}{"""},
+		commentstyle=\color{gray}\slshape,
+		emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+		emphstyle=[4]\color{blue},
+		literate=*{:}{{\textcolor{blue}:}}{1}%
+		{=}{{\textcolor{blue}=}}{1}%
+		{-}{{\textcolor{blue}-}}{1}%
+		{+}{{\textcolor{blue}+}}{1}%
+		{*}{{\textcolor{blue}*}}{1}%
+		{!}{{\textcolor{blue}!}}{1}%
+		{(}{{\textcolor{blue}(}}{1}%
+		{)}{{\textcolor{blue})}}{1}%
+		{[}{{\textcolor{blue}[}}{1}%
+		{]}{{\textcolor{blue}]}}{1}%
+		{<}{{\textcolor{blue}<}}{1}%
+		{>}{{\textcolor{blue}>}}{1},%
+		#1,
+		framexleftmargin=1mm, framextopmargin=1mm, frame=shadowbox, rulesepcolor=\color{gray}    % 黑色边框，蓝色底纹
+}}{}
