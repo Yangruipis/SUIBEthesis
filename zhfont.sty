@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{zhfont}
+[2018/09/11 zhfont package for SUIBEthesis cls]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\defaultfontfeatures{Path = data/zh_CN-Adobe/, Mapping=tex-text}
+
+\setCJKmainfont[
+% BoldFont=AdobeHeitiStd-Regular.otf,
+AutoFakeBold = {2.5}
+]{SimSun.ttf}
+\setCJKsansfont{AdobeHeitiStd-Regular.otf}
+\setCJKmonofont{AdobeFangsongStd-Regular.otf}
+
+\setCJKfamilyfont{zhsong}{SimSun.ttf}
+\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
+\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
+\setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
+\setCJKfamilyfont{lishu}{lishu.ttf}
+\setCJKfamilyfont{calibri}{Calibri.ttf}
+
+\newcommand*{\song}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\hei}{\CJKfamily{zhhei}}   % 黑体
+\newcommand*{\kai}{\CJKfamily{zhkai}}  % 楷书
+\newcommand*{\fsong}{\CJKfamily{zhfs}} % 仿宋
+\newcommand*{\lishu}{\CJKfamily{lishu}} % lishu
+\newcommand*{\calibri}{\CJKfamily{calibri}} % calibri
+\endinput
+
+

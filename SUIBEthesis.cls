@@ -21,6 +21,7 @@
 % \setmainfont{Times New Roman}
 
 
+
 % 目录页字体
 \renewcommand\cftsecfont{\xiaosan \bfseries}
 \renewcommand\cftsubsecfont{\sihao \bfseries}
@@ -29,18 +30,19 @@
 \renewcommand{\cftaftertoctitle}{\hfill}
 
 
+\RequirePackage{zhfont}
 
 % 添加中文字体
-\setCJKfamilyfont{hei}{微软雅黑} 
-\newcommand{\hei}{\CJKfamily{hei}}
-\setCJKfamilyfont{song}{宋体} 
-\newcommand{\song}{\CJKfamily{song}}
-\setCJKfamilyfont{lishu}{华文隶书} 
-\newcommand{\lishu}{\CJKfamily{lishu}}
-\setCJKfamilyfont{calibri}{Calibri} 
-\newcommand{\calibri}{\CJKfamily{calibri}}
-\setCJKfamilyfont{kai}{楷体_GB2312}
-\newcommand{\kai}{\CJKfamily{kai}}
+% \setCJKfamilyfont{hei}{微软雅黑} 
+% \newcommand{\hei}{\CJKfamily{hei}}
+% \setCJKfamilyfont{song}{宋体} 
+% \newcommand{\song}{\CJKfamily{song}}
+% \setCJKfamilyfont{lishu}{华文隶书} 
+% \newcommand{\lishu}{\CJKfamily{lishu}}
+% \setCJKfamilyfont{calibri}{Calibri} 
+% \newcommand{\calibri}{\CJKfamily{calibri}}
+% \setCJKfamilyfont{kai}{楷体_GB2312}
+% \newcommand{\kai}{\CJKfamily{kai}}
 
 
 
@@ -92,7 +94,7 @@
 \newcommand\vposcover[2]{
   \tikz[remember picture,overlay]
   \node [yshift=-#1] at (current page.north) [below,align=flush center]
-  {\parbox{\linewidth}{\centering  \linespread{1.8} \sanhao \songti #2}};}
+  {\parbox{\linewidth}{\centering  \linespread{1.8} \sanhao #2}};}
 
 % 控制主界面的表格
 \newcommand\vposleft[2]{
@@ -195,7 +197,7 @@
     \vpostext{10.5cm}{\lishu \yihao 硕士学位论文}
     \vpostext{11.7cm}{\calibri \xiaosi MASTER DISSERTATION}
     
-    \vposcover{16cm}{
+    \vposcover{16cm}{\bfseries
       \begin{tabular} {@{}C{3cm}@{} @{}C{7cm}@{}}
         
         \textbf{学位类别：} & \SUIBE@degree \\ \cline{2-2}
