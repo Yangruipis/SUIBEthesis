@@ -1,7 +1,7 @@
 
 # 上海对外经贸大学研究生毕业论文Latex模板
 
-![](https://img.shields.io/badge/LaTeX-thesis-blue.svg)
+![](https://img.shields.io/badge/LaTeX-thesis-blue.svg?longCache=true&style=for-the-badge)
 
 ---
 
