@@ -193,9 +193,9 @@
     }
     
     \vpostext{7cm}{\lishu \yihao 上海对外经贸大学}
-    \vpostext{8.2cm}{\calibri \xiaosi SHANGHAI UNIVERSITY OF INTERNATIONAL BUSINESS AND ECONOMICS}
+    \vpostext{8.2cm}{\xiaosi SHANGHAI UNIVERSITY OF INTERNATIONAL BUSINESS AND ECONOMICS}
     \vpostext{10.5cm}{\lishu \yihao 硕士学位论文}
-    \vpostext{11.7cm}{\calibri \xiaosi MASTER DISSERTATION}
+    \vpostext{11.7cm}{\xiaosi MASTER DISSERTATION}
     
     \vposcover{16cm}{\bfseries
       \begin{tabular} {@{}C{3cm}@{} @{}C{7cm}@{}}
