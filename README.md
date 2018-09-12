@@ -14,7 +14,7 @@
 - 团队协作编写
 - 代码自动提示，包括基本语法，以cite{}中的参考文献等
 
-<img src="/data/figure/overleaf_show.gif" width="100" hegiht="200" />
+<img src="/data/figure/overleaf_show.gif" width="200" hegiht="400" />
 
 ![](/data/figure/overleaf_show.gif)
 
@@ -53,6 +53,9 @@ windows版本我后面会继续调试，不过因为用的都是win下的字体�
 - [ ] (someday)参考文件前面加入方框和编号
 
 # 样张
+
+<img src="/data/scrshot/1.jpg" width="400" hegiht="900" /> <img src="/data/scrshot/2.jpg" width="400" hegiht="900" />
+<img src="/data/scrshot/3.jpg" width="400" hegiht="900" /> <img src="/data/scrshot/4.jpg" width="400" hegiht="900" />
 
 ![](./data/scrshot/1.jpg) ![](./data/scrshot/2.jpg)
 ![](./data/scrshot/3.jpg) ![](./data/scrshot/4.jpg)
