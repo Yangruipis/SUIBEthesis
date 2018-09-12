@@ -14,7 +14,7 @@
 - 团队协作编写
 - 代码自动提示，包括基本语法，以cite{}中的参考文献等
 
-<img src="/data/figure/overleaf_show.gif" width="300" hegiht="500" /> <img src="/data/figure/overleaf_show2.gif" width="300" hegiht="500" /> <img src="/data/figure/overleaf_show3.gif" width="300" hegiht="500" />
+<img src="/data/figure/overleaf_show2.gif" width="200" hegiht="400" /> <img src="/data/figure/overleaf_show3.gif" width="200" hegiht="400" /> <img src="/data/figure/overleaf_show.gif" width="200" hegiht="400" />
 
 
 
