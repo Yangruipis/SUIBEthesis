@@ -7,12 +7,14 @@
 
 ## overleaf(sharelatex)在线编译
 
-作者已经在overleaf（sharelatex被overleaf合并了）发布了`SUIBEthesis`稳定版本，点击[overleaf链接](https://www.overleaf.com/latex/templates/suibe-thesis-template-v0-dot-1/tnydhrnnvmfc#share)直接进入，**overleaf**有如下优点：
+作者已经在overleaf（sharelatex被overleaf合并了）发布了`SUIBEthesis`稳定版本，点击[overleaf链接](https://www.overleaf.com/latex/templates/suibe-thesis-template-v0-dot-1/tnydhrnnvmfc)直接进入，**overleaf**有如下优点：
 
 - 在线编译运行，无需本地环境
 - 云端同步，随时随地编写
 - 团队协作编写
-- 代码自动提示，包括基本语法，以及**cite{}**中的参考文献等
+- 代码自动提示，包括基本语法，以cite{}中的参考文献等
+
+<img src="/data/figure/overleaf_show.gif" width="100" hegiht="200" />
 
 ![](/data/figure/overleaf_show.gif)
 
