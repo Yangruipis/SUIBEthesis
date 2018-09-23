@@ -12,7 +12,7 @@
 - 在线编译运行，无需本地环境
 - 云端同步，随时随地编写
 - 团队协作编写
-- 代码自动提示，包括基本语法，以cite{}中的参考文献等
+- 代码自动提示，包括基本语法，以及cite{}中的参考文献等
 
 <img src="/data/figure/overleaf_show2.gif" width="200" hegiht="400" /> <img src="/data/figure/overleaf_show3.gif" width="200" hegiht="400" /> <img src="/data/figure/overleaf_show.gif" width="200" hegiht="400" />
 
@@ -25,6 +25,7 @@
 - Arch Linux: manjaro
 
 windows版本我后面会继续调试，不过因为用的都是win下的字体，我觉得应该没啥问题
+2018-09-22更新：windows调试完成，texlive2017下无bug
 
 ## 本地编译方法
 
@@ -51,6 +52,8 @@ windows版本我后面会继续调试，不过因为用的都是win下的字体�
 - [x] 目录字体和标题一致
 - [x] 加入代码功能（目前只支持`python`代码的高亮，如有需要可以自行修改）
 - [ ] (someday)参考文件前面加入方框和编号
+- [x] 参考文献中作者间隔用","而不是"and"，自制bst文件`SUIBEplainnat`
+- [x] windows下debug，修改字体`lishu`为`lishufont`，因为和texlive2017原有函数冲突
 
 # 样张
 
