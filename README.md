@@ -25,6 +25,7 @@
 - Arch Linux: manjaro
 
 windows版本我后面会继续调试，不过因为用的都是win下的字体，我觉得应该没啥问题
+
 2018-09-22更新：windows调试完成，texlive2017下无bug
 
 ## 本地编译方法
@@ -54,6 +55,8 @@ windows版本我后面会继续调试，不过因为用的都是win下的字体�
 - [ ] (someday)参考文件前面加入方框和编号
 - [x] 参考文献中作者间隔用","而不是"and"，自制bst文件`SUIBEplainnat`
 - [x] windows下debug，修改字体`lishu`为`lishufont`，因为和texlive2017原有函数冲突
+- [x] 因为字体版权问题，移除内嵌字体，请保证本地拥有`宋体`、`隶书`、`微软雅黑`、`楷体_GB2312`这四种字体（一般widnows电脑都有的哈)
+- [x] 移除定义新命令中的空格，否则容易出错
 
 # 样张
 
