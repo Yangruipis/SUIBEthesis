@@ -196,14 +196,14 @@
     \@endparpenalty\@M
   \end{center}  \xiaosi \song % 后面需要空行，防止第一行无法缩进
   \vspace{2em}
-}
+}{\thispagestyle{abstractpage}}
     
 \newcommand{\keywords}[1]{
+  \thispagestyle{abstractpage}
   \vspace{2em}
   \textbf{\xiaosi 关键词：} #1 }
 
-\newenvironment{enabstract}{%
-  
+\newenvironment{enabstract}{%  
   \thispagestyle{enabstractpage}
   \@beginparpenalty\@lowpenalty
   \begin{center}%
@@ -213,7 +213,7 @@
     \@endparpenalty\@M
   \end{center}  \xiaosi % 后面需要空行，防止第一行无法缩进
   \vspace{2em}  
-}
+}{\thispagestyle{enabstractpage}}
     
 \newenvironment{mythanks}{%
   \newpage
@@ -238,6 +238,7 @@
 }
 
 \newcommand{\enkeywords}[1]{
+  \thispagestyle{enabstractpage}
   \vspace{2em}
   \textbf{\xiaosi Keywords：} #1 }
 
