@@ -53,10 +53,11 @@ This is an english abstract...
 
 % ------------------- 目录页 -----------------------
 \newpage
-\pagestyle{empty}
+\pagestyle{tocpage}
 \tableofcontents
-\pagestyle{empty}
-\thispagestyle{coverpage}
+\pagestyle{tocpage}
+\thispagestyle{tocpage}
+\addtocontents{toc}{\protect\thispagestyle{tocpage}}
 % --------------------------------------------------
 
 

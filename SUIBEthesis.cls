@@ -128,6 +128,11 @@
  \headrule
 }
 
+% 自定义目录页眉页脚
+\newpagestyle{tocpage}{
+  \sethead{}{\hei{\xiaowu{\textcolor[RGB]{128,128,132}{\@title}}}}{}
+ \headrule
+}
 
 % 创建申明页
 \newcommand\make@statement{ 
